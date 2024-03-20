@@ -1,0 +1,75 @@
+<template>
+    <div class="flex flex-row min-h-screen">
+        <div class="w-3/4 h-screen bg-orange-50">
+            <div class = "flex mx-10 mt-6 justify-start">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 .409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                </svg>
+                </div>
+                <div class="flex self-center text-3xl ml-2 font-semibold text-yellow-900 font-serif">
+                    待鉴定画作
+                </div>
+            </div>
+            <div class = "flex flex-col mx-10 my-6 w-1/1 h-1/2 border-yellow-800 rounded-2xl border-4 bg-orange-100">
+                <div class = "mx-10 mt-10 mb-3 bg-transparent overflow-auto touch-auto">
+                    <img :src="case_Image" alt="" class = "scale-100 hover:scale-150" />
+                </div>
+                <button class = "mx-10 mb-5 w-16 px-3 py-3 bg-stone-500 bg-opacity-20 rounded-xl">
+                    <RouterLink :to="{'name': 'test'}">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                        </svg>
+                    </RouterLink>
+                </button>
+            </div>
+            <div class = "grid grid-cols-5 gap-6 mx-10 mt-6">
+                <div class="col-span-2 ">
+                    <div class="flex justify-start">
+                        <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                        </svg>
+                        </div>
+
+                        <div class="flex self-center text-3xl ml-2 font-semibold text-yellow-900 font-serif">
+                            待鉴定信息
+                        </div>
+                    </div>
+
+
+                    <div>
+                       <div class = "flex flex-col my-6 w-1/1 h-60 border-yellow-800 rounded-2xl border-4 bg-orange-100 px-5 py-5">
+                            <div>
+                                <p class="underline underline-offset-8 text-xl text-yellow-900">尚待鉴定的信息</p>
+                                <p class="underline underline-offset-8 text-xl text-yellow-900">尚待鉴定的信息</p>
+                                <p class="underline underline-offset-8 text-xl text-yellow-900">尚待鉴定的信息</p>
+                                <p class="underline underline-offset-8 text-xl text-yellow-900">尚待鉴定的信息</p>
+
+                            </div>
+                       </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="col-span-3 bg-white">
+
+                </div>
+            </div>
+        </div>
+        <div class="w-1/4 h-screen bg-orange-100"></div>
+    </div>
+</template>
+
+<script>
+import case_Image from '@/assets/case1/case_清晰版_new.png'
+export default{
+    name: 'detail',
+    data() {
+      return {
+        case_Image,
+      }
+    },
+}
+</script>

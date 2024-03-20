@@ -1,0 +1,61 @@
+<template>
+    <div ref="chartDom" class="chartDom" style="width: 100%;height:100%;">
+    </div>
+  </template>
+  
+  <script setup>
+  import * as echarts from 'echarts'
+  import { ref, onMounted, watch } from 'vue'
+  const chartDom = ref()
+  
+  const option = {
+    tooltip: {
+      trigger: 'item',
+
+    },
+    series: {
+            type: 'graph',
+            emphasis: {
+            focus: 'adjacency'
+            },
+            data: [
+            {
+                id: '0',
+                name: 'mountain1',
+                symbolSize: 50
+                
+            },
+            {
+                id: '1',
+                name: 'mountain2',
+                symbolSize: 50
+            },
+            {
+                id: '2',
+                name: 'tree1',
+                symbolSize: 50
+            },
+            {
+                id: '3',
+                name: 'tree2',
+                symbolSize: 50
+            },
+            ],
+            links: [
+            {
+                source: '0',
+                target: '1',
+            },
+            ],
+        }
+  }
+  // 不赋值给ref响应式Proxy对象
+  let chart
+  
+  onMounted(() => {
+    chart = echarts.init(chartDom.value)
+    chart.setOption(option)
+  })
+  </script>
+  
+  
