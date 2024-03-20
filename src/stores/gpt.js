@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export async function* getChatgpt_Multurn_qa(messages) {
+export async function* getChatgpt_Multurn_qa(messages,apiKey) {
         const apiKey = ""
         const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "post",
