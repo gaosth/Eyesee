@@ -89,10 +89,10 @@
                             <Sankey/>
                             <div class="flex flex-row gap-2">
                                 <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full">山水</div>
-                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full">写意</div>
-                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full">绢本</div>
-                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full">立轴</div>
-                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full">水墨</div>
+                                <div class="basis-1/6 bg-yellow-600 text-white text-center rounded-full">写意</div>
+                                <div class="basis-1/6 bg-yellow-600 text-white text-center rounded-full">绢本</div>
+                                <div class="basis-1/6 bg-yellow-600 text-white text-center rounded-full">立轴</div>
+                                <div class="basis-1/6 bg-yellow-600 text-white text-center rounded-full">水墨</div>
                             </div>
                         </div>
                     </div>

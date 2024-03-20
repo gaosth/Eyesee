@@ -48,9 +48,9 @@
 
 
                     <div>
-                       <div class = "flex flex-col my-6 w-1/1 h-64 border-yellow-800 rounded-2xl border-4 bg-orange-100 px-4 py-3">
+                       <div class = "flex flex-col my-6 w-1/1 h-60 border-yellow-800 rounded-2xl border-4 bg-orange-100 px- py-1">
                             <div>
-                                <div class="rounded-xl bg-yellow-600 text-xl text-white mb-2 px-6 py-2 w-4/6">画家A所作山水画</div>
+                                <div class="rounded-xl bg-yellow-600 text-xl text-white mb-2 px-6 py-2 w-4/6">画家A所作山水画</d3iv>
                                 <p class="underline underline-offset-8 text text-yellow-900 mb-2">来源：古玩市场</p>
                                 <p class="underline underline-offset-8 text text-yellow-900 mb-2">长：205cm  宽： 106cm</p>
                                 <p class="underline underline-offset-8 text text-yellow-900 mb-2">作者：马远 朝代：宋</p>
@@ -78,7 +78,7 @@
                     </div>
 
                     <div>
-                        <div class = "flex flex-col my-6 w-1/1 h-64 border-yellow-800 rounded-2xl border-4 bg-orange-100 px-6 py-2">
+                        <div class = "flex flex-col my-6 w-1/1 h-60 border-yellow-800 rounded-2xl border-4 bg-orange-100 px-6 py-6">
                             <div class="flex flex-row gap-2">
                                 <div class="basis-1/6 bg-yellow-600 text-white text-center rounded-full">材料</div>
                                 <div class="basis-1/6 bg-yellow-600 text-white text-center rounded-full">形制</div>
@@ -87,13 +87,6 @@
                                 <div class="basis-1/6 bg-yellow-600 text-white text-center rounded-full">设色</div>
                             </div>
                             <Sankey/>
-                            <div class="flex flex-row gap-2">
-                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full">山水</div>
-                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full">写意</div>
-                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full">绢本</div>
-                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full">立轴</div>
-                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full">水墨</div>
-                            </div>
                         </div>
                     </div>
                 </div>

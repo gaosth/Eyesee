@@ -37,7 +37,7 @@
             </div>
 
             <div class = "flex flex-col mx-10 my-6 w-1/1 h-4/5 border-yellow-800 rounded-2xl border-4 bg-orange-50 relative">
-               <div class = "grid grid-cols-2 gap-4 mx-10 h-2/3">
+               <div class = "grid grid-cols-2 gap-4 mx-10 h-1/2">
                   <div class = "px-4 py-10 h-1/1">
                      <div class = "flex justify-start">
                         <div>
@@ -49,7 +49,7 @@
                            分析结论
                         </div>
                      </div>
-                     <div class="flex justify-center border-yellow-800 border-dashed rounded-2xl border-4 mr-4 mt-4 h-60 py-2">
+                     <div class="flex justify-center border-yellow-800 border-dashed rounded-2xl border-4 mr-4 mt-4 h-2/3 py-2">
                         <div class = "w-2/3 h-1/1 relative" ref="getInfo">
                            <heatmap v-if="bbox1[chosen].object[0] == '印章'"/>
                            <heatmap2 v-if="bbox1[chosen].object[0] == '人物'"/>
@@ -70,7 +70,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class = "flex text-left mx-4 my-4 text-yellow-800">这幅图中的山峰线条柔和，笔触较为宽厚，墨色渲染较为均匀，表现的皴法有“卷云皴”的特点。而马远作品中的山峰线条相对直接且有一定角度，像是斧头劈砍的痕迹，主要为“斧劈皴”。因此，这座山峰的笔触和马远真迹中的笔触有一定差别，这引起了对作品真实性的怀疑。</div>
+                     <div class = "flex text-center mx-4 my-4 text-lg text-yellow-800">引起了对作品真实性的怀疑。</div>
                   </div>
                   <div class = "px-4 py-10 h-1/1">
                      <div class = "flex justify-start">
@@ -83,14 +83,15 @@
                            分析结论
                         </div>
                      </div>
-                     <div class="flex border-yellow-800 border-dashed rounded-2xl border-4 mr-4 mt-4 h-60">
+                     <div class="flex border-yellow-800 border-dashed rounded-2xl border-4 mr-4 mt-4 h-2/3">
                         <!-- relationship here -->
                         <img :src="imglink" alt="" class = "scale-100"/>
                      </div>
-                     <div class = "flex text-left mx-4 my-4 text-yellow-800">虽然在主题选择、画幅形制、使用的材料、绘画技法和颜色搭配等方面，都与马远的偏好和风格紧密相符，但印章位置的异常和笔触、皴法的不同寻常表现，都在一定程度上引起了对该作品真实性的怀疑。因此，需要进一步深入分析和考证，才能更加确切地评判这幅作品的真伪。</div>
+                     <div class = "flex text-center mx-4 my-4 text-lg text-yellow-800">这引起了对作品真实性的怀疑。</div>
+                     <div class = "flex text-center mx-4 my-4 text-lg text-yellow-800">这引起了对作品真实性的怀疑。</div>
                   </div>
                </div>
-               <div class = "h-1/5 mx-10">
+               <div class = "h-2/5 mx-10">
                   <div class = " px-4 flex justify-start">
                         <div>
                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
