@@ -1,0 +1,266 @@
+<template>
+    <div ref="chartDom" class="chartDom" style="width: 100%;height:100%;">
+    </div>
+  </template>
+  
+  <script setup>
+  import * as echarts from 'echarts'
+  import { ref, onMounted, watch } from 'vue'
+  const chartDom = ref()
+  
+  const option = {
+    tooltip: {
+      trigger: 'item',
+
+    },
+    series: {
+            type: 'sankey',
+            emphasis: {
+            focus: 'adjacency'
+            },
+            data: [
+            {
+                name: '绢本'
+            },
+            {
+                name: '纸本'
+            },
+            {
+                name: '立轴'
+            },
+            {
+                name: '册页'
+            },
+            {
+                name: '镜片'
+            },
+            {
+                name: '长卷'
+            },
+            {
+                name: '图轴'
+            },
+            {
+                name: '山水'
+            },
+            {
+                name: '花鸟'
+            },
+            {
+                name: '人物'
+            },
+            {
+                name: '兼工带写'
+            },
+            {
+                name: '写意'
+            },
+            {
+                name: '工笔'
+            },
+            {
+                name: '淡彩'
+            },
+            {
+                name: '水墨'
+            },
+            {
+                name: '重彩'
+            },
+            ],
+            links: [
+            {
+                source: '绢本',
+                target: '立轴',
+                value: 33
+            },
+            {
+                source: '绢本',
+                target: '册页',
+                value: 28
+            },
+            {
+                source: '绢本',
+                target: '镜片',
+                value: 5
+            },
+            {
+                source: '绢本',
+                target: '长卷',
+                value: 7
+            },
+            {
+                source: '绢本',
+                target: '图轴',
+                value: 2
+            },
+            {
+                source: '纸本',
+                target: '立轴',
+                value: 2
+            },
+            {
+                source: '纸本',
+                target: '册页',
+                value: 1
+            },
+            {
+                source: '纸本',
+                target: '镜片',
+                value: 1
+            },
+            {
+                source: '纸本',
+                target: '长卷',
+                value: 3
+            },
+            {
+                source: '轴',
+                target: '山水',
+                value: 0.3
+            },
+            {
+                source: '册',
+                target: '山水',
+                value: 0.2
+            },
+            {
+                source: '册',
+                target: '花鸟',
+                value: 0.1
+            },
+            {
+                source: '镜',
+                target: '山水',
+                value: 0.1
+            },
+            {
+                source: '镜',
+                target: '花鸟',
+                value: 0.05
+            },
+            {
+                source: '镜',
+                target: '人物',
+                value: 0.05
+            },
+            {
+                source: '卷',
+                target: '山水',
+                value: 0.1
+            },
+            {
+                source: '卷',
+                target: '花鸟',
+                value: 0.1
+            },
+            {
+                source: '山水',
+                target: '兼工带写',
+                value: 0.3
+            },
+            {
+                source: '山水',
+                target: '写意',
+                value: 0.2
+            },
+            {
+                source: '山水',
+                target: '工笔',
+                value: 0.2
+            },
+            {
+                source: '花鸟',
+                target: '兼工带写',
+                value: 0.15
+            },
+            {
+                source: '花鸟',
+                target: '工笔',
+                value: 0.1
+            },
+            {
+                source: '人物',
+                target: '兼工带写',
+                value: 0.05
+            },
+            {
+                source: '兼工带写',
+                target: '重彩',
+                value: 0.5
+            },
+            {
+                source: '写意',
+                target: '水墨',
+                value: 0.2
+            },
+            {
+                source: '工笔',
+                target: '淡彩',
+                value: 0.3
+            },
+            ],
+            levels: [
+            {
+              depth: 0,
+              itemStyle: {
+                color: '#f7e3a8'
+              },
+              lineStyle: {
+                color: 'source',
+                opacity: 0.6
+              }
+            },
+            {
+              depth: 1,
+              itemStyle: {
+                color: '#d6c695'
+              },
+              lineStyle: {
+                color: 'source',
+                opacity: 0.6
+              }
+            },
+            {
+              depth: 2,
+              itemStyle: {
+                color: '#d8b64e'
+              },
+              lineStyle: {
+                color: 'source',
+                opacity: 0.6
+              }
+            },
+            {
+              depth: 3,
+              itemStyle: {
+                color: '#a58a3a'
+              },
+              lineStyle: {
+                color: 'source',
+                opacity: 0.6
+              }
+            },
+            {
+              depth: 4,
+              itemStyle: {
+                color: '#a88417'
+              },
+              lineStyle: {
+                color: 'source',
+                opacity: 0.6
+              }
+            }
+          ],
+        }
+  }
+  // 不赋值给ref响应式Proxy对象
+  let chart
+  
+  onMounted(() => {
+    chart = echarts.init(chartDom.value)
+    chart.setOption(option)
+  })
+  </script>
+  
+  
