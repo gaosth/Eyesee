@@ -2,7 +2,7 @@
     <div class="flex flex-row min-h-screen">
        <div class="w-1/3 h-screen bg-orange-100">
         <button class="mx-10 my-10 bg-yellow-700 px-10 py-3 font-bold text-white rounded-3xl text-xl bg-opacity-75">
-           <RouterLink :to="{'name': 'detail2'}">
+           <RouterLink :to="{'name': 'detail3'}">
               返回
            </RouterLink>
         </button>
@@ -37,7 +37,7 @@
            </div>
 
            <div class = "flex flex-col mx-10 my-6 w-1/1 h-4/5 border-yellow-800 rounded-2xl border-4 bg-orange-50 relative">
-              <div class = "grid grid-cols-2 gap-4 mx-10 h-2/3">
+              <div class = "grid grid-cols-2 gap-4 mx-10 h-1/2">
                  <div class = "px-4 py-10 h-1/1">
                     <div class = "flex justify-start">
                        <div>
@@ -70,7 +70,7 @@
                           </div>
                        </div>
                     </div>
-                    <div class = "flex text-left mx-4 my-4 text-yellow-800">从图中观察，红色虚线框标识的位置位于一个颜色较深的区域，这表明在该位置上山石在郭熙的作品中出现的频率较高。因此，根据这张热力图，可以说图中山石的位置是符合郭熙的习惯的。</div>
+                    <div class = "flex text-center mx-4 my-4 text-lg text-yellow-800">根据热力图的分析，待鉴定画作中印章的位置并不在梁楷作品中印章出现频率较高的区域。这一点可能表明画作与梁楷的典型印章放置习惯不吻合，从而使这件作品更有可能是伪造的。</div>
                  </div>
                  <div class = "px-4 py-10 h-1/1">
                     <div class = "flex justify-start">
@@ -83,17 +83,15 @@
                           分析结论
                        </div>
                     </div>
-                    <div class="flex border-yellow-800 border-dashed rounded-2xl border-4 mr-4 mt-4 h-60">
+                    <div class="flex border-yellow-800 border-dashed rounded-2xl border-4 mr-4 mt-4 h-2/3">
                        <!-- relationship here -->
                        <imgLink1 v-if="chosen == 0"/>
                        <imgLink2 v-if="chosen == 1"/>
-                       <imgLink3 v-if="chosen == 2"/>
-                       <imgLink4 v-if="chosen == 3"/>
                     </div>
-                    <div class = "flex text-left mx-4 my-4 text-yellow-800">这个疑似郭熙作品的山峰切片，可以发现皴法中笔触的粗细、力度以及墨色的运用与李唐的风格有相似之处。笔触显得比较强劲和直接，皴纹之间的对比比较突出，这与李唐的风格相符。郭熙的作品中皴法通常比较含蓄，线条更加流畅，墨色层次更为细腻。</div>
+                    <div class = "flex text-center mx-4 my-4 text-lg text-yellow-800">这里是一些描述性的文字</div>
                  </div>
               </div>
-              <div class = "h-1/5 mx-10">
+              <div class = "h-2/5 mx-10">
                  <div class = " px-4 flex justify-start">
                        <div>
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
@@ -104,7 +102,7 @@
                           分析结论
                        </div>
                     </div>
-                    <div class = "flex text-left mx-4 my-4 text-xl text-yellow-800 underline underline-offset-8">这幅画在题材、材质、技法、和形制上符合郭熙的常见风格，且山石位置符合其作品习惯，但设色和皴法的细节更接近李唐的风格。因此，虽然基本特征与郭熙相符，需深入分析笔触和墨色使用，以确认是否为郭熙真迹。</div>
+                    <div class = "flex text-center mx-4 my-4 text-xl text-yellow-800 underline underline-offset-8">这里是一些描述性的文字</div>
               </div>
               <div class="absolute bottom-4 right-48 bg-yellow-700 px-10 py-2 font-bold text-white rounded-3xl text-xl bg-opacity-75" @click.prevent = "last()">上一个</div>
               <div class="absolute bottom-4 right-10 bg-yellow-700 px-10 py-2 font-bold text-white rounded-3xl text-xl bg-opacity-75" @click.prevent = "next()">下一个</div>
@@ -114,19 +112,19 @@
 </template>
 
 <script>
-import case_Image from '@/assets/case2/case2.png'
-import bbox1 from '@/components/bbox/bbox2.json'
+import case_Image from '@/assets/case3/case3.png'
+import bbox1 from '@/components/bbox/bbox3.json'
 import { ref, onMounted } from 'vue'
-import heatmap from '@/components/Heatmap.vue'
+import heatmap from '@/components/case3/heatmap3.vue'
 import heatmap2 from '@/components/Heatmap2.vue'
-import heatmap3 from '@/components/case2/heatmap1.vue'
-import heatmap4 from '@/components/case2/heatmap2.vue'
+import heatmap3 from '@/components/case3/heatmap1.vue'
+import heatmap4 from '@/components/case3/heatmap2.vue'
 import heatmap5 from '@/components/Heatmap5.vue'
 import heatmap6 from '@/components/Heatmap6.vue'
 import heatmap7 from '@/components/Heatmap7.vue'
-import heatmap8 from '@/components/Heatmap8.vue'
-import imgLink1 from '@/components/case2/imgLink1.vue'
-import imgLink2 from '@/components/case2/imgLink2.vue'
+import heatmap8 from '@/components/case3/heatmap4.vue'
+import imgLink1 from '@/components/case3/imgLink1.vue'
+import imgLink2 from '@/components/case3/imgLink2.vue'
 import imgLink3 from '@/components/case2/imgLink3.vue'
 import imgLink4 from '@/components/case2/imgLink4.vue'
 

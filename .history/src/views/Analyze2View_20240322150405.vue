@@ -104,7 +104,7 @@
                           分析结论
                        </div>
                     </div>
-                    <div class = "flex text-left mx-4 my-4 text-xl text-yellow-800 underline underline-offset-8">这幅画在题材、材质、技法、和形制上符合郭熙的常见风格，且山石位置符合其作品习惯，但设色和皴法的细节更接近李唐的风格。因此，虽然基本特征与郭熙相符，需深入分析笔触和墨色使用，以确认是否为郭熙真迹。</div>
+                    <div class = "flex text-center mx-4 my-4 text-xl text-yellow-800 underline underline-offset-8">这幅画在题材、材质、技法、和形制上符合郭熙的常见风格，且山石位置符合其作品习惯，但设色和皴法的细节更接近李唐的风格。因此，虽然基本特征与郭熙相符，需深入分析笔触和墨色使用，以确认是否为郭熙真迹。</div>
               </div>
               <div class="absolute bottom-4 right-48 bg-yellow-700 px-10 py-2 font-bold text-white rounded-3xl text-xl bg-opacity-75" @click.prevent = "last()">上一个</div>
               <div class="absolute bottom-4 right-10 bg-yellow-700 px-10 py-2 font-bold text-white rounded-3xl text-xl bg-opacity-75" @click.prevent = "next()">下一个</div>

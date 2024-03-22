@@ -70,7 +70,7 @@
                           </div>
                        </div>
                     </div>
-                    <div class = "flex text-left mx-4 my-4 text-yellow-800">从图中观察，红色虚线框标识的位置位于一个颜色较深的区域，这表明在该位置上山石在郭熙的作品中出现的频率较高。因此，根据这张热力图，可以说图中山石的位置是符合郭熙的习惯的。</div>
+                    <div class = "flex text-center mx-4 my-4 text-lg text-yellow-800">这里是一些描述性的文字</div>
                  </div>
                  <div class = "px-4 py-10 h-1/1">
                     <div class = "flex justify-start">
@@ -90,7 +90,7 @@
                        <imgLink3 v-if="chosen == 2"/>
                        <imgLink4 v-if="chosen == 3"/>
                     </div>
-                    <div class = "flex text-left mx-4 my-4 text-yellow-800">这个疑似郭熙作品的山峰切片，可以发现皴法中笔触的粗细、力度以及墨色的运用与李唐的风格有相似之处。笔触显得比较强劲和直接，皴纹之间的对比比较突出，这与李唐的风格相符。郭熙的作品中皴法通常比较含蓄，线条更加流畅，墨色层次更为细腻。</div>
+                    <div class = "flex text-center mx-4 my-4 text-lg text-yellow-800">这里是一些描述性的文字</div>
                  </div>
               </div>
               <div class = "h-1/5 mx-10">
@@ -104,7 +104,7 @@
                           分析结论
                        </div>
                     </div>
-                    <div class = "flex text-left mx-4 my-4 text-xl text-yellow-800 underline underline-offset-8">这幅画在题材、材质、技法、和形制上符合郭熙的常见风格，且山石位置符合其作品习惯，但设色和皴法的细节更接近李唐的风格。因此，虽然基本特征与郭熙相符，需深入分析笔触和墨色使用，以确认是否为郭熙真迹。</div>
+                    <div class = "flex text-center mx-4 my-4 text-xl text-yellow-800 underline underline-offset-8">从图中观察，红色虚线框标识的位置位于一个颜色较深的区域，这表明在该位置上山石在郭熙的作品中出现的频率较高。因此，根据这张热力图，可以说图中山石的位置是符合郭熙的习惯的。</div>
               </div>
               <div class="absolute bottom-4 right-48 bg-yellow-700 px-10 py-2 font-bold text-white rounded-3xl text-xl bg-opacity-75" @click.prevent = "last()">上一个</div>
               <div class="absolute bottom-4 right-10 bg-yellow-700 px-10 py-2 font-bold text-white rounded-3xl text-xl bg-opacity-75" @click.prevent = "next()">下一个</div>

@@ -88,7 +88,7 @@
                         <imgLink3 v-if="chosen == 8"/>
                         <imgLink4 v-if="chosen == 9"/>
                         <imgLink1 v-if="chosen == 5"/>
-                        <imgLink2 v-if="chosen == 4"/>
+                        <imgLink2 v-if="chosen == 3"/>
                      </div>
                      <div class = "flex text-left mx-4 my-4 text-yellow-800">这幅画展示的山峰线条柔和、宽厚，呈现“卷云皱”风格，与马远典型的值接、角度明显的”斧劈皱”笔触不同，从而引发对其真实性的疑问。</div>
                   </div>
