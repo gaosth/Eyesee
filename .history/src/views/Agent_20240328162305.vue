@@ -305,7 +305,7 @@
 
                       <div class = "flex justify-start w-full h-full">
                           <div class = "mx-4 w-2/5 h-4/5">
-                            <img :src="mt1" alt=""/>
+                            <img :src="mt1" alt="" class = "scale-150"/>
                           </div>
 
                           <button class = "bg-stone-500 bg-opacity-20 h-1/3 my-16 rounded-full mx-2" @click.prevent = "last()">
