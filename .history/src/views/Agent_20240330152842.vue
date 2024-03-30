@@ -538,10 +538,19 @@ export default{
 
   methods: {
     submit(){
+      if(this.chatnum == 0){
         this.showingList.push(this.messages[this.chatnum])
         this.chatnum = this.chatnum + 1
         this.content = ''
         console.log(this.chatnum)
+      }else{
+        this.showingList.push(this.messages[this.chatnum])
+        this.chatnum = this.chatnum + 1
+        this.showingList.push(this.messages[this.chatnum])
+        this.chatnum = this.chatnum + 1
+        this.content = ''
+        console.log(this.chatnum)
+      }
     },
     sankeyClick(){
       if(this.sankeyshow == 0) this.sankeyshow = 1;
