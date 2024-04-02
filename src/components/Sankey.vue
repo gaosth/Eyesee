@@ -20,287 +20,292 @@
             },
             data: [
             {
-                name: '绢本'
+                name: 'Silk'
             },
             {
-                name: '纸本'
+                name: 'Paper'
             },
             {
-                name: '立轴'
+                name: 'Verical Scroll'
             },
             {
-                name: '册页'
+                name: 'Album'
             },
             {
-                name: '镜片'
+                name: 'Hanging Scroll'
             },
             {
-                name: '长卷'
+                name: 'Long Scroll'
             },
             {
-                name: '图轴'
+                name: 'Painting Scroll'
             },
             {
-                name: '山水'
+                name: 'Landscape'
             },
             {
-                name: '花鸟'
+                name: 'Flower and Bird'
             },
             {
-                name: '人物'
+                name: 'Figures'
             },
             {
-                name: '兼工带写'
+                name: 'Combined'
             },
             {
-                name: '写意'
+                name: 'Freehand'
             },
             {
-                name: '工笔'
+                name: 'Delicate'
             },
             {
-                name: '淡彩'
+                name: 'Light-colored'
             },
             {
-                name: '水墨'
+                name: 'Ink-and-wash'
             },
             {
-                name: '重彩'
+                name: 'Heavy-colored'
             },
             {
-                name: '设色'
+                name: 'Colored'
             },
             {
-                name: '螺青'
+                name: 'Light-indigo'
             },
             {
-                name: '吴妆'
+                name: 'Wu-style'
             },
             ],
             links: [
             {
-                source: '绢本',
-                target: '立轴',
+                source: 'Silk',
+                target: 'Verical Scroll',
                 value: 33,
             },
             {
-                source: '绢本',
-                target: '册页',
+                source: 'Silk',
+                target: 'Album',
                 value: 28
             },
             {
-                source: '绢本',
-                target: '镜片',
+                source: 'Silk',
+                target: 'Hanging Scroll',
                 value: 5
             },
             {
-                source: '绢本',
-                target: '长卷',
+                source: 'Silk',
+                target: 'Long Scroll',
                 value: 7
             },
             {
-                source: '绢本',
-                target: '图轴',
+                source: 'Silk',
+                target: 'Painting Scroll',
                 value: 2
             },
             {
-                source: '纸本',
-                target: '立轴',
+                source: 'Paper',
+                target: 'Verical Scroll',
                 value: 2
             },
             {
-                source: '纸本',
-                target: '册页',
+                source: 'Paper',
+                target: 'Album',
                 value: 1
             },
             {
-                source: '纸本',
-                target: '镜片',
+                source: 'Paper',
+                target: 'Hanging Scroll',
                 value: 1
             },
             {
-                source: '纸本',
-                target: '长卷',
+                source: 'Paper',
+                target: 'Long Scroll',
                 value: 3
             },
             {
-                source: '立轴',
-                target: '山水',
+                source: 'Verical Scroll',
+                target: 'Landscape',
                 value: 30
             },
             {
-                source: '立轴',
-                target: '人物',
+                source: 'Verical Scroll',
+                target: 'Figures',
                 value: 4
             },
             {
-                source: '立轴',
-                target: '花鸟',
+                source: 'Verical Scroll',
+                target: 'Flower and Bird',
                 value: 2
             },
             {
-                source: '册页',
-                target: '山水',
+                source: 'Album',
+                target: 'Landscape',
                 value: 14
             },
             {
-                source: '册页',
-                target: '人物',
+                source: 'Album',
+                target: 'Figures',
                 value: 4
             },
             {
-                source: '册页',
-                target: '花鸟',
+                source: 'Album',
+                target: 'Flower and Bird',
                 value: 5
             },
             {
                 source: '扇面',
-                target: '山水',
+                target: 'Landscape',
                 value: 3
             },
             {
                 source: '扇面',
-                target: '人物',
+                target: 'Figures',
                 value: 5
             },
             {
                 source: '扇面',
-                target: '花鸟',
+                target: 'Flower and Bird',
                 value: 1
             },
             {
-                source: '长卷',
-                target: '山水',
+                source: 'Long Scroll',
+                target: 'Landscape',
                 value: 8
             },
             {
-                source: '镜片',
-                target: '山水',
+                source: 'Hanging Scroll',
+                target: 'Landscape',
                 value: 7
             },
             {
-                source: '图轴',
-                target: '花鸟',
+                source: 'Painting Scroll',
+                target: 'Flower and Bird',
                 value: 1
             },
             {
-                source: '图轴',
-                target: '人物',
+                source: 'Painting Scroll',
+                target: 'Figures',
                 value: 1
             },
             {
-                source: '山水',
-                target: '兼工带写',
+                source: 'Landscape',
+                target: 'Combined',
                 value: 37
             },
             {
-                source: '山水',
-                target: '写意',
+                source: 'Landscape',
+                target: 'Freehand',
                 value: 31
             },
             {
-                source: '山水',
-                target: '工笔',
+                source: 'Landscape',
+                target: 'Delicate',
                 value: 7
             },
             {
-                source: '人物',
-                target: '兼工带写',
+                source: 'Figures',
+                target: 'Combined',
                 value: 16
             },
             {
-                source: '人物',
-                target: '写意',
+                source: 'Figures',
+                target: 'Freehand',
                 value: 13
             },
             {
-                source: '人物',
-                target: '工笔',
+                source: 'Figures',
+                target: 'Delicate',
                 value: 4
             },
             {
-                source: '花鸟',
-                target: '兼工带写',
+                source: 'Flower and Bird',
+                target: 'Combined',
                 value: 4
             },
             {
-                source: '花鸟',
-                target: '写意',
+                source: 'Flower and Bird',
+                target: 'Freehand',
                 value: 7
             },
             {
-                source: '花鸟',
-                target: '工笔',
+                source: 'Flower and Bird',
+                target: 'Delicate',
                 value: 7
             },
             {
-                source: '兼工带写',
-                target: '淡彩',
+                source: 'Combined',
+                target: 'Light-colored',
                 value: 17
             },
             {
-                source: '兼工带写',
-                target: '水墨',
+                source: 'Combined',
+                target: 'Ink-and-wash',
                 value: 11
             },
             {
-                source: '兼工带写',
-                target: '重彩',
+                source: 'Combined',
+                target: 'Heavy-colored',
                 value: 1
             },
             {
-                source: '兼工带写',
-                target: '设色',
-                value: 5
+                source: 'Combined',
+                target: 'Colored',
+                value: 25
             },
             {
-                source: '兼工带写',
-                target: '螺青',
+                source: 'Combined',
+                target: 'Light-indigo',
                 value: 12
             },
             {
-                source: '兼工带写',
-                target: '吴妆',
+                source: 'Combined',
+                target: 'Wu-style',
                 value: 4
             },
             {
-                source: '写意',
-                target: '淡彩',
+                source: 'Freehand',
+                target: 'Light-colored',
                 value: 10
             },
             {
-                source: '写意',
-                target: '水墨',
+                source: 'Freehand',
+                target: 'Ink-and-wash',
                 value: 12
             },
             {
-                source: '写意',
-                target: '设色',
-                value: 3
+                source: 'Freehand',
+                target: 'Colored',
+                value: 15
             },
             {
-                source: '写意',
-                target: '螺青',
+                source: 'Freehand',
+                target: 'Light-indigo',
                 value: 11
             },
             {
-                source: '工笔',
-                target: '淡彩',
+                source: 'Delicate',
+                target: 'Light-colored',
                 value: 4
             },
             {
-                source: '工笔',
-                target: '水墨',
+                source: 'Delicate',
+                target: 'Ink-and-wash',
                 value: 6
             },
             {
-                source: '工笔',
-                target: '螺青',
+                source: 'Delicate',
+                target: 'Colored',
+                value: 24
+            },
+            {
+                source: 'Delicate',
+                target: 'Light-indigo',
                 value: 2
             },
             {
-                source: '工笔',
-                target: '吴妆',
+                source: 'Delicate',
+                target: 'Wu-style',
                 value: 3
             },
             ],
