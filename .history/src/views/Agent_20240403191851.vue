@@ -244,113 +244,10 @@
 
                       </div>
 
-                      <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl"
-                        v-if="index == 15 && detailshow == 1"
-                      >
-                      <div class="flex justify-start mb-2">
-                          <div>
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
-                              </svg>
-
-                          </div>
-
-                          <div class="flex self-center text-2xl ml-2 font-semibold text-yellow-900 font-serif">
-                            Scatter plot
-                          </div>
-
-                          <button class = "ml-52 rounded-lg bg-stone-500 bg-opacity-20  px-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                            </svg>
-                          </button>
-                          <button class = "ml-4 rounded-lg bg-stone-500 bg-opacity-20  px-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
-                            </svg>
-                          </button>
-                        </div>
-                        <div class = "w-full h-96">
-                          <Scatterplot />
-                        </div>
-                        <div class = "bg-white rounded-lg px-4 py-4 text-lg bg-opacity-50">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 fill-yellow-50 float-left">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                          </svg>
-                          The scatterplot encodes the embeddings of mountain peaks in Ma Yuan’s paintings. The closer the two points are, the more similar the style of these two mountain peaks. The highlighted point represents the mountain peak you clicked on. You can click the points to view the corresponding mountain peaks.
-                        </div>
-                      </div>
-
-                      <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl"
-                        v-if="index == 17 && detailshow == 1"
-                      >
-                      <div class="flex justify-start mb-2">
-                          <div>
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
-                              </svg>
-
-                          </div>
-
-                          <div class="flex self-center text-2xl ml-2 font-semibold text-yellow-900 font-serif">
-                            Brush detail
-                          </div>
-
-                          <button class = "ml-52 rounded-lg bg-stone-500 bg-opacity-20  px-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                            </svg>
-                          </button>
-                          <button class = "ml-4 rounded-lg bg-stone-500 bg-opacity-20  px-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
-                            </svg>
-                          </button>
-                      </div>
-
-                      <div class = "flex justify-start w-full h-full">
-                          <div class = "mx-4 w-2/5 h-4/5">
-                            <img :src="mt1" alt=""/>
-                          </div>
-
-                          <button class = "bg-stone-500 bg-opacity-20 h-1/3 my-16 rounded-full mx-2" @click.prevent = "last()">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-                            </svg>
-                          </button>
-
-                          <div class = "bg-transparent w-2/5 h-4/5 overflow-auto touch-auto">
-                              <img :src="mt1_n1" alt="" v-if="chosen == 0" class = "scale-100"/>
-                              <img :src="mt1_n2" alt="" v-if="chosen == 1" class = "scale-100" />
-                              <img :src="mt1_n3" alt="" v-if="chosen == 2" class = "scale-100" />
-                              <img :src="mt1_n4" alt="" v-if="chosen == 3" class = "scale-100" />
-                              <img :src="mt1_n5" alt="" v-if="chosen == 4" class = "scale-100" />
-                              <img :src="mt1_n6" alt="" v-if="chosen == 5" class = "scale-100" />
-                          </div>
-
-                          <button class = "bg-stone-500 bg-opacity-20 h-1/3 my-16 rounded-full mx-2" @click.prevent = "next()">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
-                          </button>
-
-                        </div>
-
-                      <div class = "flex justify-start">
-                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-4">Peak - Cirrus wrinkles</div>
-                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 0">LiCheng-85.78</div>
-                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 1">LiCheng-87.87</div>
-                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 2">LiCheng-89.38</div>
-                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 3">LiCheng-92.91</div>
-                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 4">MaYuan-68.75</div>
-                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 5">MaYuan-70.38</div>
-                      </div>
-                      </div>
-
                       <div class="text-black text-xl px-6 leading-relaxed rounded-lg bg-white mt-2 py-4 max-w-xl"
                       >
                         <div style="white-space: pre-wrap">{{showingList[index].content}}</div>
-                        <div class = "flex justify-start py-2" v-if="index != 6 && index != 10 && index != 12 && index != 17">
+                        <div class = "flex justify-start py-2" v-if="index != 6 && index != 10 && index != 12">
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 fill-yellow-50">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
                           </svg>
@@ -417,6 +314,11 @@
                             3. Please help me summarize the authentication results of the artwork.
                           </div>
                         </div>
+                        <div v-if="index == 17">
+                          <button class = "text-lg text-stone-500 px-2" @click.prevent = "detailClick()">
+                            "Brush detail"
+                          </button>
+                        </div>
                         <div v-if="index == 19">
                           <div class = "text-lg text-stone-500 px-2">
                             1. Continue to analyze the current painting information
@@ -452,9 +354,102 @@
                         </div>
                       </div>
 
-                      
+                      <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl h-96"
+                        v-if="index == 15 && detailshow == 1"
+                      >
+                      <div class="flex justify-start mb-2">
+                          <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+                              </svg>
 
-                      
+                          </div>
+
+                          <div class="flex self-center text-2xl ml-2 font-semibold text-yellow-900 font-serif">
+                            Scatter plot
+                          </div>
+
+                          <button class = "ml-52 rounded-lg bg-stone-500 bg-opacity-20  px-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                            </svg>
+                          </button>
+                          <button class = "ml-4 rounded-lg bg-stone-500 bg-opacity-20  px-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
+                            </svg>
+                          </button>
+                        </div>
+                        <div class = "w-full h-full">
+                          <Scatterplot />
+                        </div>
+                      </div>
+
+                      <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl"
+                        v-if="index == 15 && detailshow == 1"
+                      >
+                      <div class="flex justify-start mb-2">
+                          <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+                              </svg>
+
+                          </div>
+
+                          <div class="flex self-center text-2xl ml-2 font-semibold text-yellow-900 font-serif">
+                            Brush detail
+                          </div>
+
+                          <button class = "ml-52 rounded-lg bg-stone-500 bg-opacity-20  px-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                            </svg>
+                          </button>
+                          <button class = "ml-4 rounded-lg bg-stone-500 bg-opacity-20  px-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
+                            </svg>
+                          </button>
+                      </div>
+
+                      <div class = "flex justify-start w-full h-full">
+                          <div class = "mx-4 w-2/5 h-4/5">
+                            <img :src="mt1" alt=""/>
+                          </div>
+
+                          <button class = "bg-stone-500 bg-opacity-20 h-1/3 my-16 rounded-full mx-2" @click.prevent = "last()">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                            </svg>
+                          </button>
+
+                          <div class = "bg-transparent w-2/5 h-4/5 overflow-auto touch-auto">
+                              <img :src="mt1_n1" alt="" v-if="chosen == 0" class = "scale-100"/>
+                              <img :src="mt1_n2" alt="" v-if="chosen == 1" class = "scale-100" />
+                              <img :src="mt1_n3" alt="" v-if="chosen == 2" class = "scale-100" />
+                              <img :src="mt1_n4" alt="" v-if="chosen == 3" class = "scale-100" />
+                              <img :src="mt1_n5" alt="" v-if="chosen == 4" class = "scale-100" />
+                              <img :src="mt1_n6" alt="" v-if="chosen == 5" class = "scale-100" />
+                          </div>
+
+                          <button class = "bg-stone-500 bg-opacity-20 h-1/3 my-16 rounded-full mx-2" @click.prevent = "next()">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                          </button>
+
+                        </div>
+
+                      <div class = "flex justify-start">
+                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-4">Peak - Cirrus wrinkles</div>
+                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 0">LiCheng-85.78</div>
+                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 1">LiCheng-87.87</div>
+                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 2">LiCheng-89.38</div>
+                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 3">LiCheng-92.91</div>
+                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 4">MaYuan-68.75</div>
+                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 5">MaYuan-70.38</div>
+                      </div>
+                      </div>
 
                     </div>
                   </div>
@@ -614,11 +609,11 @@ export default{
         },
         {
           "role": "user",
-          "content": "Show me the paintings corresponding to the points I clicked.",
+          "content": "Show me Ma Yuan's authentic brushstrokes.",
         },
         {
           "role": "assistant",
-          "content": "This is the mountain peak under authentication and the one you selected in the scatter plot. You can closely examine the differences in their brushstrokes.",
+          "content": "Here are some mountain peaks from authentic works by Ma Yuan. You can also click on more mountain peaks in the scatter plot that you wish to examine.",
         },
         {
           "role": "user",

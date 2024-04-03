@@ -614,11 +614,11 @@ export default{
         },
         {
           "role": "user",
-          "content": "Show me the paintings corresponding to the points I clicked.",
+          "content": "Show me Ma Yuan's authentic brushstrokes.",
         },
         {
           "role": "assistant",
-          "content": "This is the mountain peak under authentication and the one you selected in the scatter plot. You can closely examine the differences in their brushstrokes.",
+          "content": "Here are some mountain peaks from authentic works by Ma Yuan. You can also click on more mountain peaks in the scatter plot that you wish to examine.",
         },
         {
           "role": "user",

@@ -76,7 +76,7 @@
                             </button>
 
                             <div class = "bg-transparent overflow-auto touch-auto">
-                              <img :src="colored" alt="" class = "scale-100 mt-4"/>
+                              <img :src="colored" alt="" class = "scale-100"/>
                             </div>
 
                             <button class = "bg-stone-500 bg-opacity-20 h-1/3 my-16 rounded-full mx-2">
@@ -109,7 +109,103 @@
 
                       </div>
 
-                      <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl"
+                      <div class="text-black text-xl px-6 leading-relaxed rounded-lg bg-white mt-2 py-4 max-w-xl"
+                      >
+                        <div style="white-space: pre-wrap">{{showingList[index].content}}</div>
+                        <div class = "flex justify-start py-2" v-if="index != 6">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 fill-yellow-50">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                          </svg>
+                          <div class="px-2 text-lg text-stone-500" v-if="index == 0">Steps---------------------------------------------</div>
+                          <div class="px-2 text-lg text-stone-500" v-if="index != 0">Recommended Questions-----------------------------</div>
+                        </div>
+                        <div v-if="index == 0">
+                          <div class = "text-lg text-stone-500 px-2">
+                            1. Upload the picture and provide relevant information.
+                          </div>
+                          <div class = "text-lg text-stone-500 px-2">
+                            2.	Ask about the features and details of the painting.
+                          </div>
+                          <div class = "text-lg text-stone-500 px-2">
+                            3.	View analysis results and charts.
+                          </div>
+                        </div>
+                        <div v-if="index == 2">
+                          <div class = "text-lg text-stone-500 px-2">
+                            1. Does the basic attributes align with Ma Yuan's style?
+                          </div>
+                          <div class = "text-lg text-stone-500 px-2">
+                            2. Is the layout of objects in the painting normal?
+                          </div>
+                          <div class = "text-lg text-stone-500 px-2">
+                            3. Is the brushstroke of mountains authentic?
+                          </div>
+                        </div>
+                        <div v-if="index == 4">
+                          <div class = "text-lg text-stone-500 px-2">
+                            1. View authentication results under the seal dimension.
+                          </div>
+                          <div class = "text-lg text-stone-500 px-2">
+                            2. I want to check if the strokes matches Ma Yuan's style.
+                          </div>
+                          <button class = "text-lg text-stone-500 px-2" @click.prevent = "sankeyClick()">
+                            3. I want to view the basic features of the artwork.
+                          </button>
+                        </div>
+                        <div v-if="index == 8">
+                          <button class = "text-lg text-stone-500 px-2" @click.prevent = "hmClick()">
+                            "Seal Layout"
+                          </button>
+                        </div>
+                        <div v-if="index == 10">
+                          <div class = "text-lg text-stone-500 px-2">
+                            1. Could you analyze the painting's theme for me?
+                          </div>
+                          <div class = "text-lg text-stone-500 px-2">
+                            2. Can you verify if the brushstrokes align with Ma Yuan's style?
+                          </div>
+                          <div class = "text-lg text-stone-500 px-2">
+                            3. I'd like to examine the form of the artwork, please.
+                          </div>
+                          <button class = "text-lg text-stone-500 px-2" @click.prevent = "wcClick()">
+                            See "Word Cloud"
+                          </button>
+                        </div>
+                        <div v-if="index == 12">
+                          <button class = "text-lg text-stone-500 px-2" @click.prevent = "partClick()">
+                            Part selection
+                          </button>
+                        </div>
+                        <div v-if="index == 13">
+                          <div class = "text-lg text-stone-500 px-2">
+                            1. Does the basic attributes align with Ma Yuan's style?
+                          </div>
+                          <div class = "text-lg text-stone-500 px-2">
+                            2. Is the layout of objects in the painting normal?
+                          </div>
+                          <div class = "text-lg text-stone-500 px-2">
+                            3. Is the brushstroke of mountains authentic?
+                          </div>
+                        </div>
+                        <div v-if="index == 15">
+                          <button class = "text-lg text-stone-500 px-2" @click.prevent = "detailClick()">
+                            "Brush detail"
+                          </button>
+                        </div>
+                        <div v-if="index == 17">
+                          <div class = "text-lg text-stone-500 px-2">
+                            1. Continue to analyze the current painting information
+                          </div>
+                          <div class = "text-lg text-stone-500 px-2">
+                            2. Start analyzing a new painting
+                          </div>
+                          <div class = "text-lg text-stone-500 px-2">
+                            3. Unsatisfied? Continue to refine the details
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl h-80"
                         v-if="index == 8 && hmshow == 1"
                       >
                         <div class="flex justify-start mb-2">
@@ -120,10 +216,10 @@
                             </div>
 
                             <div class="flex self-center text-2xl ml-2 font-semibold text-yellow-900 font-serif">
-                                Seal Layout & Word CLoud
+                                Seal Layout
                             </div>
 
-                            <button class = "ml-10 rounded-lg bg-stone-500 bg-opacity-20  px-2">
+                            <button class = "ml-52 rounded-lg bg-stone-500 bg-opacity-20  px-2">
                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
                               </svg>
@@ -134,68 +230,40 @@
                               </svg>
                             </button>
                         </div>
-                        <div class = "flex justify-start w-full h-64">
-                          <div class = "mx-4 w-2/5 h-4/5 relative">
+                        <div class = "flex justify-start w-full h-full">
+                          <div class = "mx-4 w-2/5 h-4/5 relative" ref="getInfo">
                             <heatmap/>
-                            <div class = "absolute border-4 border-dashed border-red-900 border-opacity-50"
-                            :style="{
-                                  left: ((bbox1[1].bbox[0]-bbox1[1].bbox[2]/2) * 212) + 'px', 
-                                  top: ((bbox1[1].bbox[1]-bbox1[1].bbox[3]/2) * 198.4) + 'px', 
-                                  width: (bbox1[1].bbox[2] * 212) + 'px',
-                                  height: (bbox1[1].bbox[3] * 198.4) + 'px',
+                            <button v-for="(area, index) in bbox0" :key="index"
+                              class="absolute border-2 border-dashed border-red-500"
+                              :style="{
+                                  left: ((area.bbox[0]-area.bbox[2]/2) * 211) + 'px', 
+                                  top: ((area.bbox[1]-area.bbox[3]/2) * 230) + 'px', 
+                                  width: (area.bbox[2] * 211) + 'px', 
+                                  height: (area.bbox[3] * 230) + 'px',
                                   }"
-                            >
-                            </div>
+                              v-on:click="chosen = index"
+                              >
+                              <div v-if="chosen == index" class = "w-full h-full bg-red-900 bg-opacity-25"></div>
+                            </button>
                           </div>
-                          <img :src="wordcloud" alt="" class = "w-211px h-3/5 mt-3"/>                         
-                        </div>
 
-                        <div class = "bg-white rounded-lg px-4 py-4 text-lg bg-opacity-50">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 fill-yellow-50 float-left">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                          </svg>
-                          Red areas on the heat map indicate higher frequencies of seals in Ma Yuan's works, while blue areas indicate lower frequencies. The box highlights the position of the seal in the input painting. You can click on the heatmap to view the paintings with seals in this position.
-                        </div>
-                        <div class = "bg-white rounded-lg px-4 py-4 text-lg bg-opacity-50">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 fill-yellow-50 float-left">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                          </svg>
-                          The word cloud displays the frequency of each seal in Ma Yuan's paintings. The larger the text, the more often that particular seal appears. By clicking on a word, you can view the paintings that contain that seal. 
-                        </div>
-                      </div>
-
-                      <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl"
-                        v-if="index == 10 && wcshow == 1"
-                      >
-
-                        <div class = "mt-10 flex justify-start h-80">
-
-                          <button class = "bg-stone-500 bg-opacity-20 h-1/3 my-16 rounded-full mx-2" @click.prevent = "lastfig()">
+                          <button class = "bg-stone-500 bg-opacity-20 h-1/3 my-16 rounded-full mx-2" @click.prevent = "last()">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                             </svg>
                           </button>
 
-                          <div class = "bg-transparent w-1/2 h-4/5 overflow-auto touch-auto mr-2">
-                              <img :src="img1" alt="" v-if="figchosen == 0" class = "scale-100"/>
-                              
-                              <img :src="img3" alt="" v-if="figchosen == 1" class = "scale-100" />
-                              
-                              <img :src="img5" alt="" v-if="figchosen == 2" class = "scale-100" />
-                              
-
-                          </div>
-                          <div class = "bg-transparent w-1/2 h-4/5 overflow-auto touch-auto">
-                              
-                              <img :src="img2" alt="" v-if="figchosen == 0" class = "scale-100" />
-                              
-                              <img :src="img4" alt="" v-if="figchosen == 1" class = "scale-100" />
-                              
-                              <img :src="img6" alt="" v-if="figchosen == 2" class = "scale-100" />
+                          <div class = "bg-transparent h-4/5 overflow-auto touch-auto">
+                              <img :src="img1" alt="" v-if="chosen == 0" class = "scale-100"/>
+                              <img :src="img2" alt="" v-if="chosen == 1" class = "scale-100" />
+                              <img :src="img3" alt="" v-if="chosen == 2" class = "scale-100" />
+                              <img :src="img4" alt="" v-if="chosen == 3" class = "scale-100" />
+                              <img :src="img5" alt="" v-if="chosen == 4" class = "scale-100" />
+                              <img :src="img6" alt="" v-if="chosen == 5" class = "scale-100" />
 
                           </div>
 
-                          <button class = "bg-stone-500 bg-opacity-20 h-1/3 my-16 rounded-full mx-2" @click.prevent = "nextfig()">
+                          <button class = "bg-stone-500 bg-opacity-20 h-1/3 my-16 rounded-full mx-2" @click.prevent = "next()">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                             </svg>
@@ -205,8 +273,34 @@
                       </div>
 
                       <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl"
-                        v-if="index == 12 && wcshow == 1"
+                        v-if="index == 10 && wcshow == 1"
                       >
+                        <div class="flex justify-start mb-2">
+                            <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Zm3.75 11.625a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                            </svg> 
+                            </div>
+
+                            <div class="flex self-center text-2xl ml-2 font-semibold text-yellow-900 font-serif">
+                                Word Cloud
+                            </div>
+
+                            <button class = "ml-52 rounded-lg bg-stone-500 bg-opacity-20  px-2">
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                              </svg>
+                            </button>
+                            <button class = "ml-4 rounded-lg bg-stone-500 bg-opacity-20  px-2">
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
+                              </svg>
+                            </button>
+                        </div>
+
+                        <div class = "mx-4 h-4/5 my-2" ref="getInfo">
+                            <img :src="wordcloud" alt=""/>
+                        </div>
 
                         <div class = "mt-10 flex justify-start h-80">
 
@@ -245,6 +339,28 @@
                       </div>
 
                       <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl"
+                        v-if="index == 12 && partshow == 1"
+                      >
+                        <div class = "bg-transparent relative">
+                          <img :src="case_Image1" alt="" class = "scale-100"/>
+                          <button v-for="(area, index) in bbox1" :key="index"
+                          class="absolute border-4 border-dashed border-white border-opacity-50"
+                          :style="{
+                              left: ((area.bbox[0]-area.bbox[2]/2) * 528) + 'px', 
+                              top: ((area.bbox[1]-area.bbox[3]/2) * 1060) + 'px', 
+                              width: (area.bbox[2] * 528) + 'px', 
+                              height: (area.bbox[3] * 1060) + 'px',
+                              }"
+                          v-on:click="this.chosen1 = index"
+                          @click.prevent="moreinfo()"
+                          >
+                              <div v-if="this.chosen1 == index" class = "w-full h-full bg-white bg-opacity-25"></div>
+                              <p v-if="this.chosen1 == index" class="absolute -top-8 whitespace-nowrap text-lg text-white">{{ area.object[0] }}</p>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl h-96"
                         v-if="index == 15 && detailshow == 1"
                       >
                       <div class="flex justify-start mb-2">
@@ -270,19 +386,13 @@
                             </svg>
                           </button>
                         </div>
-                        <div class = "w-full h-96">
+                        <div class = "w-full h-full">
                           <Scatterplot />
-                        </div>
-                        <div class = "bg-white rounded-lg px-4 py-4 text-lg bg-opacity-50">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 fill-yellow-50 float-left">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                          </svg>
-                          The scatterplot encodes the embeddings of mountain peaks in Ma Yuan’s paintings. The closer the two points are, the more similar the style of these two mountain peaks. The highlighted point represents the mountain peak you clicked on. You can click the points to view the corresponding mountain peaks.
                         </div>
                       </div>
 
                       <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl"
-                        v-if="index == 17 && detailshow == 1"
+                        v-if="index == 15 && detailshow == 1"
                       >
                       <div class="flex justify-start mb-2">
                           <div>
@@ -346,115 +456,6 @@
                         <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 5">MaYuan-70.38</div>
                       </div>
                       </div>
-
-                      <div class="text-black text-xl px-6 leading-relaxed rounded-lg bg-white mt-2 py-4 max-w-xl"
-                      >
-                        <div style="white-space: pre-wrap">{{showingList[index].content}}</div>
-                        <div class = "flex justify-start py-2" v-if="index != 6 && index != 10 && index != 12 && index != 17">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 fill-yellow-50">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                          </svg>
-                          <div class="px-2 text-lg text-stone-500" v-if="index == 0 || index == 14">Steps---------------------------------------------</div>
-                          <div class="px-2 text-lg text-stone-500" v-if="index != 0 && index != 14">Recommended Questions-----------------------------</div>
-                        </div>
-                        <div v-if="index == 0">
-                          <div class = "text-lg text-stone-500 px-2">
-                            1. Upload the picture and provide relevant information.
-                          </div>
-                          <div class = "text-lg text-stone-500 px-2">
-                            2.	Ask about the features and details of the painting.
-                          </div>
-                          <div class = "text-lg text-stone-500 px-2">
-                            3.	View analysis results and charts.
-                          </div>
-                        </div>
-                        <div v-if="index == 2">
-                          <div class = "text-lg text-stone-500 px-2">
-                            1. Does the basic attributes align with Ma Yuan's style?
-                          </div>
-                          <div class = "text-lg text-stone-500 px-2">
-                            2. Is the layout of objects in the painting normal?
-                          </div>
-                          <div class = "text-lg text-stone-500 px-2">
-                            3. Is the brushstroke of mountains authentic?
-                          </div>
-                        </div>
-                        <div v-if="index == 4">
-                          <div class = "text-lg text-stone-500 px-2">
-                            1. View authentication results under the seal dimension.
-                          </div>
-                          <div class = "text-lg text-stone-500 px-2">
-                            2. I want to check if the strokes matches Ma Yuan's style.
-                          </div>
-                          <button class = "text-lg text-stone-500 px-2" @click.prevent = "sankeyClick()">
-                            3. I want to view the basic features of the artwork.
-                          </button>
-                        </div>
-                        <div v-if="index == 8">
-                          <div class = "text-lg text-stone-500 px-2">
-                            1. Show me the paintings with seals on the position I click.
-                          </div>
-                          <div class = "text-lg text-stone-500 px-2">
-                            2. View paintings with the same seal I chose in the word cloud.
-                          </div>
-                          <div class = "text-lg text-stone-500 px-2">
-                            3. View authentication results under the technique dimension.
-                          </div>
-                        </div>
-                        <div v-if="index == 14">
-                          <button class = "text-lg text-stone-500 px-2" @click.prevent = "partClick()">
-                            Part selection
-                          </button>
-                        </div>
-                        <div v-if="index == 15">
-                          <div class = "text-lg text-stone-500 px-2">
-                            1. Show me the paintings corresponding to the points I clicked.
-                          </div>
-                          <div class = "text-lg text-stone-500 px-2">
-                            2. Please further analyze the techniques of the trees.
-                          </div>
-                          <div class = "text-lg text-stone-500 px-2">
-                            3. Please help me summarize the authentication results of the artwork.
-                          </div>
-                        </div>
-                        <div v-if="index == 19">
-                          <div class = "text-lg text-stone-500 px-2">
-                            1. Continue to analyze the current painting information
-                          </div>
-                          <div class = "text-lg text-stone-500 px-2">
-                            2. Start analyzing a new painting
-                          </div>
-                          <div class = "text-lg text-stone-500 px-2">
-                            3. Unsatisfied? Continue to refine the details
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl"
-                        v-if="index == 14 && partshow == 1"
-                      >
-                        <div class = "bg-transparent relative">
-                          <img :src="case_Image1" alt="" class = "scale-100"/>
-                          <button v-for="(area, index) in bbox1" :key="index"
-                          class="absolute border-4 border-dashed border-white border-opacity-50"
-                          :style="{
-                              left: ((area.bbox[0]-area.bbox[2]/2) * 528) + 'px', 
-                              top: ((area.bbox[1]-area.bbox[3]/2) * 1060) + 'px', 
-                              width: (area.bbox[2] * 528) + 'px', 
-                              height: (area.bbox[3] * 1060) + 'px',
-                              }"
-                          v-on:click="this.chosen1 = index"
-                          @click.prevent="moreinfo()"
-                          >
-                              <div v-if="this.chosen1 == index" class = "w-full h-full bg-white bg-opacity-25"></div>
-                              <p v-if="this.chosen1 == index" class="absolute -top-8 whitespace-nowrap text-lg text-white">{{ area.object[0] }}</p>
-                          </button>
-                        </div>
-                      </div>
-
-                      
-
-                      
 
                     </div>
                   </div>
@@ -578,47 +579,39 @@ export default{
         },
         {
           "role": "user",
-          "content": "View authentication results under the seal dimension.",
+          "content": "I want to see the raw data of the heat map.",
         },
         {
           "role": "assistant",
-          "content": "Upon analysis, the text on this seal reads “宣统御览之宝,” which translates to “Treasure of the Xuantong Emperor's Collection.” This is a seal from the last emperor of the Qing Dynasty, Emperor Xuantong.\n\nBy comparing the seal’s position with the hotspots on the heat map, we can observe that the box is not within any major hotspot area; instead, it is located in a relatively “cold” or low-frequency region, suggesting that the seal's position does not align with Ma Yuan's commonly used positions. However, such an analysis cannot completely rule out the possibility that this is an authentic work, as artists and collectors sometimes place seals in different locations. From the perspective of seal placement, though, this painting is more likely to be a forgery than an authentic piece.\n\nNevertheless, authenticating an artwork typically requires a comprehensive analysis of multiple factors, including seals, brushstrokes, paper quality, coloration, and artistic style. Therefore, the final conclusion should be based on a more comprehensive analysis.",
+          "content": "Please click on the area of the heat map that you wish to examine to obtain the corresponding paintings with the seal at that position.",
         },
         {
           "role": "user",
-          "content": "Show me the paintings with seals on the position I click.",
+          "content": "What is the text on this seal? In which other paintings by Ma Yuan does this seal appear?",
         },
         {
           "role": "assistant",
-          "content": "These are Ma Yuan's paintings containing the seals at the location you clicked on the heatmap. There are a total of 6 pieces, and you can swipe left or right to view them.",
+          "content": "Upon analysis, the text on this seal reads '宣统御览之宝,' which translates to 'Treasure of the Xuantong Emperor's Collection.' This is a seal from the last emperor of the Qing Dynasty, Emperor Xuantong. Further examination through a word cloud reveals that this seal frequently appears in Ma Yuan's artworks. By clicking on the seal in the word cloud, you can access paintings that have been stamped with this particular seal.",
         },
         {
           "role": "user",
-          "content": "View paintings with the same seal I chose in the word cloud.",
+          "content": "Do the techniques of mountain peaks in the painting align with Ma Yuan's brushstrokes?",
         },
         {
           "role": "assistant",
-          "content": "Here are Ma Yuan’s paintings with the seal you chose in the word cloud, “宣统御览之宝”. You can zoom in to check the details of these seals.",
+          "content": "Please select the mountain peaks in the painting that you would like to analyze. By comparing the brushstroke details, we can further determine if this part aligns with Ma Yuan's painting style.",
+        },
+        {
+          "role": "assistant",
+          "content": "After comparing the mountain peak in question with those in authentic works by Ma Yuan, we can observe the following characteristics:\n\n1.	Lines: The lines are relatively wide and rounded, lacking sharpness and a strong sense of ruggedness, presenting a soft and flowing quality.\n2.	Ink Usage: The ink usage is rather uniform, with minimal variation in depth, lacking strong light and shadow contrasts, overall giving a gentle and reserved impression.\n3.	3.	Texture Expression: The texture of the mountain peak is delicate, lacking strong three-dimensionality, and more suggestive of a gentle warmth.\n\nBased on these characteristics, the technique used for this mountain peak is likely the 'Juanyuncun,' which is used to depict softer rocks with rounded lines resembling clouds or water, showcasing strong fluidity. On the other hand, Ma Yuan's rock formations often employ the 'Fupicun' technique, featuring relatively hard, direct lines with certain angles, resembling marks left by an axe, to depict the hardness and ruggedness of rocks. Based on this analysis, the style of this mountain peak seems to lack the distinct sense of strength and dynamism often found in Ma Yuan's works, appearing more delicate and reserved.\nHowever, genuine authentication requires a more comprehensive analysis, including factors such as the paper, ink traces, composition, and comparisons with other works by the artist. Art authentication in the antique market often involves scientific testing and insights from art history experts. Without these additional pieces of information, any analysis remains preliminary and speculative.",
         },
         {
           "role": "user",
-          "content": "View authentication results under the technique dimension.",
+          "content": "Show me Ma Yuan's authentic brushstrokes.",
         },
         {
           "role": "assistant",
-          "content": "Please select the object in the painting that you would like to analyze. By comparing the details, we can further determine if this part aligns with Ma Yuan's painting technique.",
-        },
-        {
-          "role": "assistant",
-          "content": "After comparing the mountain peak in question with those in authentic works by Ma Yuan, we can observe the following characteristics:\n\n1.	Lines: The lines are relatively wide and rounded, lacking sharpness and a strong sense of ruggedness, presenting a soft and flowing quality.\n2.	Ink Usage: The ink usage is rather uniform, with minimal variation in depth, lacking strong light and shadow contrasts, overall giving a gentle and reserved impression.\n3.	Texture Expression: The texture of the mountain peak is delicate, lacking strong three-dimensionality, and more suggestive of a gentle warmth.\n\nBased on these characteristics, the technique used for this mountain peak is likely the 'Juanyuncun,' which is used to depict softer rocks with rounded lines resembling clouds or water, showcasing strong fluidity. On the other hand, Ma Yuan's rock formations often employ the 'Fupicun' technique, featuring relatively hard, direct lines with certain angles, resembling marks left by an axe, to depict the hardness and ruggedness of rocks. Based on this analysis, the style of this mountain peak seems to lack the distinct sense of strength and dynamism often found in Ma Yuan's works, appearing more delicate and reserved.\n\nHowever, genuine authentication requires a more comprehensive analysis, including factors such as the paper, ink traces, composition, and comparisons with other works by the artist. Art authentication in the antique market often involves scientific testing and insights from art history experts. Without these additional pieces of information, any analysis remains preliminary and speculative.",
-        },
-        {
-          "role": "user",
-          "content": "Show me the paintings corresponding to the points I clicked.",
-        },
-        {
-          "role": "assistant",
-          "content": "This is the mountain peak under authentication and the one you selected in the scatter plot. You can closely examine the differences in their brushstrokes.",
+          "content": "Here are some mountain peaks from authentic works by Ma Yuan. You can also click on more mountain peaks in the scatter plot that you wish to examine.",
         },
         {
           "role": "user",
@@ -634,7 +627,7 @@ export default{
       chatnum: 0,
       case_Image1,
       sankeyshow: 1,
-      hmshow: 1,
+      hmshow: 0,
       bbox1,
       bbox0,
       chosen: 0,
@@ -645,11 +638,11 @@ export default{
       img5,
       img6,
       wordcloud,
-      partshow: 1,
+      partshow: 0,
       chosen1: 0,
       figchosen: 0,
-      detailshow: 1,
-      wcshow: 1,
+      detailshow: 0,
+      wcshow: 0,
       mt1,
       mt1_n1,
       mt1_n2,

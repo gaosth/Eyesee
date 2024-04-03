@@ -80,7 +80,7 @@
             links: [
             {
                 source: 'Silk',
-                target: 'Vertical Scroll',
+                target: 'Verical Scroll',
                 value: 33,
             },
             {
@@ -105,7 +105,7 @@
             },
             {
                 source: 'Paper',
-                target: 'Vertical Scroll',
+                target: 'Verical Scroll',
                 value: 2
             },
             {
@@ -124,17 +124,17 @@
                 value: 3
             },
             {
-                source: 'Vertical Scroll',
+                source: 'Verical Scroll',
                 target: 'Landscape',
                 value: 30
             },
             {
-                source: 'Vertical Scroll',
+                source: 'Verical Scroll',
                 target: 'Figures',
                 value: 4
             },
             {
-                source: 'Vertical Scroll',
+                source: 'Verical Scroll',
                 target: 'Flower and Bird',
                 value: 2
             },

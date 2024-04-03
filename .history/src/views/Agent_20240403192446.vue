@@ -417,6 +417,11 @@
                             3. Please help me summarize the authentication results of the artwork.
                           </div>
                         </div>
+                        <div v-if="index == 17">
+                          <button class = "text-lg text-stone-500 px-2" @click.prevent = "detailClick()">
+                            "Brush detail"
+                          </button>
+                        </div>
                         <div v-if="index == 19">
                           <div class = "text-lg text-stone-500 px-2">
                             1. Continue to analyze the current painting information
@@ -614,11 +619,11 @@ export default{
         },
         {
           "role": "user",
-          "content": "Show me the paintings corresponding to the points I clicked.",
+          "content": "Show me Ma Yuan's authentic brushstrokes.",
         },
         {
           "role": "assistant",
-          "content": "This is the mountain peak under authentication and the one you selected in the scatter plot. You can closely examine the differences in their brushstrokes.",
+          "content": "Here are some mountain peaks from authentic works by Ma Yuan. You can also click on more mountain peaks in the scatter plot that you wish to examine.",
         },
         {
           "role": "user",
