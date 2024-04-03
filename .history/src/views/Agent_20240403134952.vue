@@ -193,7 +193,7 @@
                         </div>
                         <Sankey/>
                         <div class="flex flex-row gap-2 mb-4">
-                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Silk</div>
+                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Paper</div>
                                 <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Vertical Scroll</div>
                                 <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Landscape</div>
                                 <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Combined</div>
@@ -553,7 +553,7 @@ export default{
         },
         {
           "role": "assistant",
-          "content": "To determine if this work belongs to Ma Yuan, we can analyze it from the following aspects: \n\n1. Examine the painting's basic attributes, including theme, format, medium, style, and coloration.\n2. Analyze whether the position and content of the seal and inscription in the painting match the characteristics of authentic works.\n3. Analyze if the content and techniques of the artwork align with Ma Yuan's style.\n\nPlease ask more specific questions for further analysis.",
+          "content": "To determine if this work belongs to Ma Yuan, we can analyze it from the following aspects: \n\n1. Examine the painting's basic attributes, including theme, format, medium, style, and coloration.\n2. Analyze the position of objects in the painting to see if they align with Ma Yuan's typical layout.\n3. Observe the brushstrokes in the painting and compare them to authentic Ma Yuan strokes.\n\nPlease ask more specific questions for further analysis.",
         },
         {
           "role": "user",

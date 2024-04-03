@@ -193,7 +193,7 @@
                         </div>
                         <Sankey/>
                         <div class="flex flex-row gap-2 mb-4">
-                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Silk</div>
+                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Paper</div>
                                 <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Vertical Scroll</div>
                                 <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Landscape</div>
                                 <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Combined</div>
@@ -356,7 +356,7 @@
                         </div>
                       </div>
 
-                      <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl h-96"
+                      <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl"
                         v-if="index == 15 && detailshow == 1"
                       >
                       <div class="flex justify-start mb-2">
@@ -382,7 +382,7 @@
                             </svg>
                           </button>
                         </div>
-                        <div class = "w-full h-full">
+                        <div class = "mx-4 w-2/5 h-4/5">
                           <Scatterplot />
                         </div>
                       </div>
@@ -553,7 +553,7 @@ export default{
         },
         {
           "role": "assistant",
-          "content": "To determine if this work belongs to Ma Yuan, we can analyze it from the following aspects: \n\n1. Examine the painting's basic attributes, including theme, format, medium, style, and coloration.\n2. Analyze whether the position and content of the seal and inscription in the painting match the characteristics of authentic works.\n3. Analyze if the content and techniques of the artwork align with Ma Yuan's style.\n\nPlease ask more specific questions for further analysis.",
+          "content": "To determine if this work belongs to Ma Yuan, we can analyze it from the following aspects: \n\n1. Examine the painting's basic attributes, including theme, format, medium, style, and coloration.\n2. Analyze the position of objects in the painting to see if they align with Ma Yuan's typical layout.\n3. Observe the brushstrokes in the painting and compare them to authentic Ma Yuan strokes.\n\nPlease ask more specific questions for further analysis.",
         },
         {
           "role": "user",
@@ -589,7 +589,7 @@ export default{
         },
         {
           "role": "user",
-          "content": "Do the techniques of mountain peaks in the painting align with Ma Yuan's brushstrokes?",
+          "content": "Are the brushstrokes of mountain peaks in the painting align with Ma Yuan's brushstrokes?",
         },
         {
           "role": "assistant",
@@ -597,7 +597,7 @@ export default{
         },
         {
           "role": "assistant",
-          "content": "After comparing the mountain peak in question with those in authentic works by Ma Yuan, we can observe the following characteristics:\n\n1.	Lines: The lines are relatively wide and rounded, lacking sharpness and a strong sense of ruggedness, presenting a soft and flowing quality.\n2.	Ink Usage: The ink usage is rather uniform, with minimal variation in depth, lacking strong light and shadow contrasts, overall giving a gentle and reserved impression.\n3.	3.	Texture Expression: The texture of the mountain peak is delicate, lacking strong three-dimensionality, and more suggestive of a gentle warmth.\n\nBased on these characteristics, the technique used for this mountain peak is likely the 'Juanyuncun,' which is used to depict softer rocks with rounded lines resembling clouds or water, showcasing strong fluidity. On the other hand, Ma Yuan's rock formations often employ the 'Fupicun' technique, featuring relatively hard, direct lines with certain angles, resembling marks left by an axe, to depict the hardness and ruggedness of rocks. Based on this analysis, the style of this mountain peak seems to lack the distinct sense of strength and dynamism often found in Ma Yuan's works, appearing more delicate and reserved.\nHowever, genuine authentication requires a more comprehensive analysis, including factors such as the paper, ink traces, composition, and comparisons with other works by the artist. Art authentication in the antique market often involves scientific testing and insights from art history experts. Without these additional pieces of information, any analysis remains preliminary and speculative.",
+          "content": "After comparing the mountain peak in question with those in authentic works by Ma Yuan, we can observe the following characteristics:\n\n1.	Lines: The lines are relatively wide and rounded, lacking sharpness and a strong sense of ruggedness, presenting a soft and flowing quality.\n2.	Ink Usage: The ink usage is rather uniform, with minimal variation in depth, lacking strong light and shadow contrasts, overall giving a gentle and reserved impression.\n3.	3.	Texture Expression: The texture of the mountain peak is delicate, lacking strong three-dimensionality, and more suggestive of a gentle warmth.\n\nConsidering these characteristics, the style of this mountain peak seems to lack the distinct sense of strength and dynamism often found in Ma Yuan's works, appearing more delicate and reserved. However, genuine authentication requires a more comprehensive analysis, including factors such as the paper, ink traces, composition, and comparisons with other works by the artist. Art authentication in the antique market often involves scientific testing and insights from art history experts. Without these additional pieces of information, any analysis remains preliminary and speculative.",
         },
         {
           "role": "user",

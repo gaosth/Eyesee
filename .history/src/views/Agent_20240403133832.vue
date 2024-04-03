@@ -193,7 +193,7 @@
                         </div>
                         <Sankey/>
                         <div class="flex flex-row gap-2 mb-4">
-                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Silk</div>
+                                <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Paper</div>
                                 <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Vertical Scroll</div>
                                 <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Landscape</div>
                                 <div class="basis-1/6 bg-yellow-600 bg-opacity-50 text-white text-center rounded-full text-sm">Combined</div>
@@ -356,7 +356,7 @@
                         </div>
                       </div>
 
-                      <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl h-96"
+                      <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl"
                         v-if="index == 15 && detailshow == 1"
                       >
                       <div class="flex justify-start mb-2">
@@ -381,10 +381,45 @@
                               <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
                             </svg>
                           </button>
+                      </div>
+
+                      <div class = "flex justify-start w-full h-full">
+                          <div class = "mx-4 w-2/5 h-4/5">
+                            <img :src="mt1" alt=""/>
+                          </div>
+
+                          <button class = "bg-stone-500 bg-opacity-20 h-1/3 my-16 rounded-full mx-2" @click.prevent = "last()">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                            </svg>
+                          </button>
+
+                          <div class = "bg-transparent w-2/5 h-4/5 overflow-auto touch-auto">
+                              <img :src="mt1_n1" alt="" v-if="chosen == 0" class = "scale-100"/>
+                              <img :src="mt1_n2" alt="" v-if="chosen == 1" class = "scale-100" />
+                              <img :src="mt1_n3" alt="" v-if="chosen == 2" class = "scale-100" />
+                              <img :src="mt1_n4" alt="" v-if="chosen == 3" class = "scale-100" />
+                              <img :src="mt1_n5" alt="" v-if="chosen == 4" class = "scale-100" />
+                              <img :src="mt1_n6" alt="" v-if="chosen == 5" class = "scale-100" />
+                          </div>
+
+                          <button class = "bg-stone-500 bg-opacity-20 h-1/3 my-16 rounded-full mx-2" @click.prevent = "next()">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                          </button>
+
                         </div>
-                        <div class = "w-full h-full">
-                          <Scatterplot />
-                        </div>
+
+                      <div class = "flex justify-start">
+                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-4">Peak - Cirrus wrinkles</div>
+                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 0">LiCheng-85.78</div>
+                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 1">LiCheng-87.87</div>
+                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 2">LiCheng-89.38</div>
+                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 3">LiCheng-92.91</div>
+                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 4">MaYuan-68.75</div>
+                        <div class = "rounded-full px-3 py-2 bg-stone-500 text-white text-xl my-4 mx-10" v-if="chosen == 5">MaYuan-70.38</div>
+                      </div>
                       </div>
 
                       <div class = "px-6 flex flex-col rounded-lg bg-yellow-50 mt-2 py-4 max-w-xl"
@@ -512,7 +547,6 @@ import img4 from '@/assets/case0/4.png'
 import img5 from '@/assets/case0/5.png'
 import img6 from '@/assets/case0/6.png'
 import wordcloud from '@/assets/case0/词云.png'
-import Scatterplot from '@/components/Scatterplot.vue'
 
   import mt1 from '@/assets/case1/mountain1/01.png'
   import mt1_n1 from '@/assets/case1/mountain1/李成1.png'
@@ -553,7 +587,7 @@ export default{
         },
         {
           "role": "assistant",
-          "content": "To determine if this work belongs to Ma Yuan, we can analyze it from the following aspects: \n\n1. Examine the painting's basic attributes, including theme, format, medium, style, and coloration.\n2. Analyze whether the position and content of the seal and inscription in the painting match the characteristics of authentic works.\n3. Analyze if the content and techniques of the artwork align with Ma Yuan's style.\n\nPlease ask more specific questions for further analysis.",
+          "content": "To determine if this work belongs to Ma Yuan, we can analyze it from the following aspects: \n\n1. Examine the painting's basic attributes, including theme, format, medium, style, and coloration.\n2. Analyze the position of objects in the painting to see if they align with Ma Yuan's typical layout.\n3. Observe the brushstrokes in the painting and compare them to authentic Ma Yuan strokes.\n\nPlease ask more specific questions for further analysis.",
         },
         {
           "role": "user",
@@ -589,7 +623,7 @@ export default{
         },
         {
           "role": "user",
-          "content": "Do the techniques of mountain peaks in the painting align with Ma Yuan's brushstrokes?",
+          "content": "Are the brushstrokes of mountain peaks in the painting align with Ma Yuan's brushstrokes?",
         },
         {
           "role": "assistant",
@@ -597,7 +631,7 @@ export default{
         },
         {
           "role": "assistant",
-          "content": "After comparing the mountain peak in question with those in authentic works by Ma Yuan, we can observe the following characteristics:\n\n1.	Lines: The lines are relatively wide and rounded, lacking sharpness and a strong sense of ruggedness, presenting a soft and flowing quality.\n2.	Ink Usage: The ink usage is rather uniform, with minimal variation in depth, lacking strong light and shadow contrasts, overall giving a gentle and reserved impression.\n3.	3.	Texture Expression: The texture of the mountain peak is delicate, lacking strong three-dimensionality, and more suggestive of a gentle warmth.\n\nBased on these characteristics, the technique used for this mountain peak is likely the 'Juanyuncun,' which is used to depict softer rocks with rounded lines resembling clouds or water, showcasing strong fluidity. On the other hand, Ma Yuan's rock formations often employ the 'Fupicun' technique, featuring relatively hard, direct lines with certain angles, resembling marks left by an axe, to depict the hardness and ruggedness of rocks. Based on this analysis, the style of this mountain peak seems to lack the distinct sense of strength and dynamism often found in Ma Yuan's works, appearing more delicate and reserved.\nHowever, genuine authentication requires a more comprehensive analysis, including factors such as the paper, ink traces, composition, and comparisons with other works by the artist. Art authentication in the antique market often involves scientific testing and insights from art history experts. Without these additional pieces of information, any analysis remains preliminary and speculative.",
+          "content": "After comparing the mountain peak in question with those in authentic works by Ma Yuan, we can observe the following characteristics:\n\n1.	Lines: The lines are relatively wide and rounded, lacking sharpness and a strong sense of ruggedness, presenting a soft and flowing quality.\n2.	Ink Usage: The ink usage is rather uniform, with minimal variation in depth, lacking strong light and shadow contrasts, overall giving a gentle and reserved impression.\n3.	3.	Texture Expression: The texture of the mountain peak is delicate, lacking strong three-dimensionality, and more suggestive of a gentle warmth.\n\nConsidering these characteristics, the style of this mountain peak seems to lack the distinct sense of strength and dynamism often found in Ma Yuan's works, appearing more delicate and reserved. However, genuine authentication requires a more comprehensive analysis, including factors such as the paper, ink traces, composition, and comparisons with other works by the artist. Art authentication in the antique market often involves scientific testing and insights from art history experts. Without these additional pieces of information, any analysis remains preliminary and speculative.",
         },
         {
           "role": "user",
@@ -662,7 +696,6 @@ export default{
         Sankey,
         Heatmap,
         heatmap,
-        Scatterplot,
     },
 
   watch: {
